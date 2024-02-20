@@ -8,7 +8,7 @@
     <title>{{ $title ?? 'SIOGA - Sistema de Obtención de Grado Académico - Escuela de Posgrado - UNU' }}</title>
 
     <!-- Favicons -->
-    <link rel="shortcut icon" href="{{ asset('media/logo-dark.PNG') }}" type="image/x-icon">
+    <link rel="shortcut icon" href="{{ asset('media/logo_light.webp') }}" type="image/x-icon">
     <!-- CSS files -->
     <link href="{{ asset('assets/dist/css/tabler.min.css?1684106062') }}" rel="stylesheet" />
     <link href="{{ asset('assets/dist/css/tabler-vendors.min.css?1684106062') }}" rel="stylesheet" />
@@ -27,6 +27,7 @@
         body {
             font-feature-settings: "cv03", "cv04", "cv11";
         }
+
     </style>
     <script src="{{ asset('assets/dist/libs/jsvectormap/dist/maps/world.js?1695847769') }}" defer></script>
     <script src="{{ asset('assets/dist/libs/jsvectormap/dist/maps/world-merc.js?1684106062') }}" defer></script>
@@ -48,23 +49,23 @@
             window.addEventListener('toast-basico', event => {
                 if (event.detail.type == 'success') {
                     notyf.success({
-                        message: event.detail.mensaje,
-                        duration: 5000,
-                        position: {
-                            x: 'center',
-                            y: 'top',
-                        },
-                        dismissible: true
+                        message: event.detail.mensaje
+                        , duration: 5000
+                        , position: {
+                            x: 'center'
+                            , y: 'top'
+                        , }
+                        , dismissible: true
                     });
                 } else {
                     notyf.error({
-                        message: event.detail.mensaje,
-                        duration: 5000,
-                        position: {
-                            x: 'center',
-                            y: 'top',
-                        },
-                        dismissible: true
+                        message: event.detail.mensaje
+                        , duration: 5000
+                        , position: {
+                            x: 'center'
+                            , y: 'top'
+                        , }
+                        , dismissible: true
                     });
                 }
             })
@@ -72,6 +73,7 @@
                 $(event.detail.modal).modal(event.detail.action)
             })
         })
+
     </script>
 </body>
 
